@@ -1,3 +1,7 @@
 /* Including fonts */
 @font-face {
-  src: url("../../fonts/"); }
+  font-family: 'fontello';
+  src: url("../../fonts/fontello/fontello.eot?48953218");
+  src: url("../../fonts/fontello/fontello.eot?48953218#iefix") format("embedded-opentype"), url("../../fonts/fontello/fontello.woff2?48953218") format("woff2"), url("../../fonts/fontello/fontello.woff?48953218") format("woff"), url("../../fonts/fontello/fontello.ttf?48953218") format("truetype"), url("../../fonts/fontello/fontello.svg?48953218#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal; }

@@ -2,12 +2,17 @@
 @import sprite.sass
 @import fonts.sass
 @import grid.sass
+@import ../../libs/fancybox/dist/jquery.fancybox.css
+@import ../../libs/slick-carousel/slick/slick.css
+@import ../../libs/slick-carousel/slick/slick-theme.css
+@import ../../libs/nouislider/distribute/nouislider.css
+@import fontello.css
 
 
 
 /* Global settings */
-$font-size: 16px
-$font-family-1: 'Tahoma', sans-serif
+$font-size: 20px
+$font-family-1: 'Verdana', sans-serif
 $color-1: #000
 
 
@@ -86,13 +91,35 @@ img
 .btn
 	position: relative
 	display: block
-	font-size: $font-size
+	font-size: 18px
 	font-family: $font-family-1
 	cursor: pointer
 	margin-left: auto
 	margin-right: auto
 	text-align: center
 	transition: .3s
+	border: 2px solid transparent
+	height: 51px
+	line-height: 45px
+	border-radius: 50px
+	&_border
+		&-red
+			border-color: #da4453
+		&-black
+			border-color: #111111
+	&_color
+		&-red
+			color: #da4453
+		&-black
+			color: #111111
+		&-white
+			color: #fff
+
+	&_bg
+		&-red
+			background-color: #da4453
+
+
 
 .input input, .textarea textarea
 	transition: .3s
@@ -100,3 +127,601 @@ img
 .input input, .btn, .slick-slide, .textarea textarea
 	outline: none !important
 
+
+
+
+
+ 
+[class^="icon-"]:before, [class*=" icon-"]:before 
+	font-family: "fontello"
+	font-style: normal
+	font-weight: normal
+	speak: none
+ 
+	display: inline-block
+	text-decoration: inherit
+	width: 1em
+	text-align: center
+	/* opacity: .8 */
+ 
+	/* For safety - reset parent styles, that can break glyph codes*/
+	font-variant: normal
+	text-transform: none
+ 
+	/* fix buttons height, for twitter bootstrap */
+	line-height: 1em
+ 
+	/* Animation center compensation - margins should be symmetric */
+	/* remove if not needed */
+ 
+	/* you can be more comfortable with increased icons size */
+	/* font-size: 120% */
+ 
+	/* Font smoothing. That was taken from TWBS */
+	-webkit-font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale
+ 
+	/* Uncomment for 3D effect */
+	/* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3) */
+
+ 
+.icon
+	&-cancel
+		&:before
+			content: '\e800'
+.icon
+	&-ok
+		&:before
+			content: '\e801'
+.icon
+	&-phone
+		&:before
+			content: '\e802'
+.icon
+	&-right-open
+		&:before
+			content: '\f006'
+.icon
+	&-left-open
+		&:before
+			content: '\f007'
+.icon
+	&-facebook
+		&:before
+			content: '\f09a'
+.icon
+	&-info
+		&:before
+			content: '\f129'
+.icon
+	&-instagram
+		&:before
+			content: '\f16d'
+.icon
+	&-vkontakte
+		&:before
+			content: '\f189'
+
+
+
+.panel
+	z-index: 10
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	background-color: rgba(0,0,0,.9)
+	padding-top: 18px
+	padding-bottom: 22px
+	transition: .3s
+	&:hover
+		background-color: rgba(0,0,0,1)
+	a
+		color: #fff
+	&__logo
+		max-width: 280px
+		width: 100%
+		padding-top: 7px
+		
+	&__nav
+		max-width: 550px
+		width: 100%
+		padding-top: 4px
+		li
+			font-size: 24px
+			margin-right: 50px
+		a
+			display: block
+			&:hover
+				color: #da4453
+		
+	&__links
+		margin-left: auto
+		
+
+.links
+	ul
+		align-items: center
+	.icon
+		font-size: 41px
+	li
+		margin-left: 40px
+		&:first-of-type
+			margin-left: 0
+	a
+		display: block
+		&:hover
+			color: #da4453
+
+.bg
+	background-attachment: fixed
+	background-position: center
+	background-size: cover
+.header
+	padding-top: 220px
+	padding-bottom: 252px
+	background-image: url('../../img/header.jpg')
+	&__title
+		font-size: 65px
+		font-weight: 700
+		margin-bottom: 25px
+		span
+			padding: 5px 20px 15px 20px
+			background-color: #da4453
+		u
+			width: 15px
+			display: inline-block
+	&__desc
+		span
+			font-size: 33px
+			padding: 10px 20px 19px
+			background-color: #ed5565
+		
+		
+	&__title, &__desc
+		margin-left: -15px
+		margin-right: -15px
+		span
+			color: #fff
+			p
+	&__phone
+		display: none
+		
+.title
+	font-size: 36px
+	font-weight: 700
+	color: #434a54
+	&:before
+		display: block
+		content: ''
+		width: 70px
+		height: 5px
+		background-color: #da4453
+		border-radius: 3px
+		margin-bottom: 15px
+	&_mid
+		text-align: center
+		&:before
+			margin-left: auto
+			margin-right: auto
+
+.loss
+	background-image: url('../../img/loss.png')
+	background-attachment: scroll
+	padding-top: 100px
+	padding-bottom: 40px
+	&__wrap
+		
+		&-title
+			margin-bottom: 17px
+		&-text
+			line-height: 30px
+			margin-bottom: 30px
+		&-desc
+			color: #fff
+			font-size: 18px
+			line-height: 24px
+			border-radius: 10px
+			padding: 20px 15px 23px 20px
+			background-color: #ed5565
+			p
+				margin-bottom: 14px
+				&:nth-of-type(1)
+					font-size: 20px
+					text-align: center
+					strong
+						font-size: 24px
+				&:last-of-type
+					margin-bottom: 0
+		&-content, &-ranges
+			width: 50%
+			padding-left: 15px
+			padding-right: 15px
+
+		&-ranges
+			padding-top: 28px
+			
+		
+	&__wrap
+		margin-left: -15px
+		margin-right: -15px
+
+	&__ranges
+		padding-top: 40px
+		
+	&__content
+		margin-top: 90px
+		margin-left: -15px
+		margin-right: -15px
+		&-icon, &-text
+			padding-left: 15px
+			padding-right: 15px
+			width: 50%
+		&-icon
+			text-align: center
+			img
+				position: relative
+				margin-top: -20px
+				width: 445px
+				display: inline-block
+				vertical-align: middle
+		&-title
+			margin-bottom: 27px
+
+		&-list
+			ul
+			li
+				width: 100%
+				line-height: 30px
+				margin-bottom: 35px
+				padding-left: 58px
+				position: relative
+				&:last-of-type
+					margin-bottom: 0
+				&:before
+					content: '\e801'
+					font-family: "fontello"
+					position: absolute
+					font-size: 42px
+					top: 5px
+					left: 0
+					color: #da4453
+
+.ranges
+	&__item
+		margin-bottom: 27px
+	&__title
+		width: calc(100% - 160px)
+	&__counts
+		font-size: 18px
+		width: 160px
+		color: #939393
+		text-align: right
+		span
+			&:nth-of-type(2)
+				&:before
+					content: '-'
+					margin-left: 4px
+					margin-right: 4px
+	&__data
+		margin-bottom: 14px
+		
+.counts
+	background-image: url('../../img/dots.png')
+	padding-top: 87px
+	padding-bottom: 90px
+	&__title
+		margin-bottom: 27px
+	&__desc
+		line-height: 30px
+		max-width: 905px
+		text-align: center
+		margin-left: auto
+		margin-right: auto
+		margin-bottom: 35px
+	&__subtitle
+		font-size: 24px
+		font-weight: 700
+		color: #434a54
+		text-align: center
+		margin-bottom: 68px	
+
+	&__list
+		margin-bottom: 55px
+	&__item
+		width: 33.333%
+		padding-left: 45px
+		&:nth-of-type(1)
+			padding-left: 105px
+		&-title
+			font-size: 30px
+			font-weight: 700
+			position: relative
+			margin-bottom: 22px
+			&:before
+				display: block
+				content: ''
+				width: 15px
+				height: 15px
+				position: absolute
+				top: 9px
+				left: -30px
+				background-color: #da4453
+		&-count
+			font-size: 64px
+			font-weight: 700
+			color: #da4453
+
+	&__btn
+		max-width: 300px
+
+		
+.about
+	padding-top: 95px
+	margin-bottom: 100px
+	&__list
+		margin-left: -15px
+		margin-right: -15px
+	&__item
+		margin-bottom: 100px
+		&:last-of-type
+			margin-bottom: 0
+		&:nth-of-type(even)
+			.about
+				&__content
+					order: 2
+				&__icon
+					order: 1
+		&:nth-of-type(1)
+			.about
+				&__icon
+					img
+						width: 400px
+						margin-top: 30px
+		&:nth-of-type(2)
+			.about
+				&__icon
+					img
+						width: 260px
+		
+	&__title
+		margin-bottom: 30px
+		&:before
+			margin-bottom: 25px
+	
+		
+	&__content, &__icon
+		padding-left: 15px
+		padding-right: 15px
+		width: 50%
+
+	&__text
+		line-height: 30px
+		p
+			margin-bottom: 30px
+			&:last-of-type
+				margin-bottom: 0
+		
+	&__icon
+		text-align: center
+		img
+			display: inline-block
+		
+	
+	&__btn
+		margin-top: 35px
+		max-width: 265px
+		margin-left: 0
+		
+
+.reviews
+	margin-bottom: 90px
+	&__title
+		margin-bottom: 30px
+		&:before
+			margin-bottom: 25px
+
+	&__desc
+		max-width: 875px
+		margin-left: auto
+		margin-right: auto
+		text-align: center
+		margin-bottom: 74px
+	&__list
+		padding-left: 120px
+		padding-right: 120px
+		min-height: 400px
+		.slick-slide
+			width: 265px
+			transition: .3s
+			padding-top: 72px
+		.slick-current
+			width: 360px
+			padding-top: 0
+	&__item
+		padding-left: 15px
+		padding-right: 15px
+		img
+			transition: .3s
+	
+
+		
+.advantages
+	padding-bottom: 95px
+	&__title
+		margin-bottom: 75px
+		&:before
+			margin-bottom: 25px
+	&__list
+		margin-left: -15px
+		margin-right: -15px
+	&__item
+		width: 50%
+		padding-left: 15px
+		padding-right: 15px
+		margin-bottom: 72px
+		&-icon
+			height: 140px
+			margin-bottom: 55px
+			img
+				position: relative
+				height: 260px
+				margin-left: auto
+				margin-right: auto
+				top: -50px
+				max-height: none !important
+		&-title
+			font-size: 24px
+			font-weight: 700
+			text-transform: uppercase
+			color: #434a54
+			margin-bottom: 15px
+		&-text
+			line-height: 30px
+
+	&__btn
+		display: inline-block
+		vertical-align: middle
+		padding-left: 30px
+		padding-right: 30px
+		margin-left: 18px
+		margin-right: 18px
+		&s
+			font-size: 0
+			text-align: center
+
+
+
+.monitoring
+	padding-top: 95px
+	background-color: #fafafa
+	&__title
+		font-size: 24px
+		text-align: center
+		margin-bottom: 14px
+		max-width: 600px
+		margin-left: auto
+		margin-right: auto
+		
+
+	&__head, &__body
+		&-item
+			border-top: 2px solid #ebebeb
+			&:nth-of-type(1)
+				width: 460px
+			&:nth-of-type(2), &:nth-of-type(3), &:nth-of-type(4)
+				width: 225px
+
+	&__head
+		&-item
+			font-size: 24px
+			padding-top: 17px
+			padding-bottom: 14px
+			span
+				display: none
+			&:nth-of-type(1)
+				font-weight: 700
+		
+	&__body
+		&-item
+			position: relative
+			padding-top: 16px
+			padding-bottom: 16px
+			&:nth-of-type(1)
+				&:after
+					content: ''
+					position: absolute
+					bottom: -5px
+					left: 0
+					right: 0
+					border: 2px solid #656d78
+		
+
+.info
+	z-index: 1
+	position: absolute
+	top: 50%
+	right: 0
+	transform: translateY(-50%)
+	&__icon
+		font-size: 0
+		color: #fff
+		width: 22px
+		height: 22px
+		line-height: 22px
+		text-align: center
+		font-weight: 400
+		background-color: #ccd1d9
+		border-radius: 50%
+		.icon
+			font-size: 20px
+		
+	&__content
+		z-index: 2
+		// display: none
+		position: absolute
+		width: 450px
+		border: 3px solid #da4453
+		background-color: #fff
+		border-radius: 10px
+		bottom: 31px
+		right: -460px
+		&:before
+			content: ''
+
+	&__text
+		font-size: 16px
+		line-height: 24px
+		color: #0c0c0c
+		padding: 25px 27px 27px
+
+	&__close   
+		position: absolute
+		right: 6px
+		top: 3px
+		font-size: 0
+		.icon
+			color: #da4453
+			font-size: 17px
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.noUi-target
+	box-shadow: none
+	background-color: #e1e1e1
+	border: none
+	height: 10px
+.noUi-origin
+
+.noUi-handle
+	&:before, &:after
+		display: none
+
+.noUi-horizontal .noUi-handle
+	width: 28px
+	border-radius: 50%
+	background-color: #da4453
+	box-shadow: none
+	border: 7px solid #d7d7d7
+	top: -9px
+	cursor: pointer
+
+.noUi-connect
+	background-color: #aab2bd
