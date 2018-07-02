@@ -24,7 +24,7 @@
 <div class="panel">
 	<div class="case">
 		<div class="panel__wrap row i-mid">
-			<div class="panel__logo"><img src="upload/logo.png" alt=""></div>
+			<div class="panel__logo"><img src="upload/logo.png" alt=""><img src="upload/logo-mob.png" alt="" class="mobile-show"></div>
 			<div class="panel__nav">
 				<ul>
 					<li><a href="#">Link</a></li>
@@ -49,7 +49,7 @@
 		</div>
 	</div>
 </div>
-<header class="header bg">
+<header class="header bg" id="main">
 	<div class="case">
 		<div class="header__wrap">
 			<div class="header__title"><span>Как увеличить продажи <u></u><br><u></u>строительных материалов?</span></div>
@@ -60,7 +60,7 @@
 </header>
 
 <main class="main">
-	<div class="loss bg">
+	<div class="loss bg" id="loss">
 		<div class="case">
 			<div class="loss__wrap row">
 				<div class="loss__wrap-content">
@@ -175,7 +175,7 @@
 							</script>
 						</div>
 					</div>
-					<div class="ranges__btn btn btn_border-red btn_color-red">Рассчитать мои потери</div>
+					<div class="ranges__btn btn btn_border-red btn_color-red btn_hover-bg-red btn_hover-color-white">Рассчитать мои потери</div>
 				</div>
 			</div>
 			<div class="loss__content row">
@@ -192,7 +192,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="counts bg">
+	<div class="counts bg" id="counts">
 		<div class="case">
 			<div class="counts__title title title_mid">Повысьте эффективность приёма звонков</div>
 			<div class="counts__desc">Для увеличения потока клиентов в ваш бизнес, мы обучим ваших сотрудников, тому, как необходимо принимать звонки с большей результативностью в курсе</div>
@@ -211,10 +211,10 @@
 					<div class="counts__item-count">36 000</div>
 				</div>
 			</div>
-			<a href="" class="counts__btn btn btn_border-black btn_color-black">Хочу узнать подробности</a>
+			<a data-fancybox data-src="#popup-order" href="javascript:;" class="counts__btn btn btn_border-black btn_color-black btn_hover-bg-red btn_hover-color-white btn_hover-border-red">Хочу узнать подробности</a>
 		</div>
 	</div>
-	<div class="about">
+	<div class="about" id="about">
 		<div class="case">
 			<div class="about__list">
 				<div class="about__item row">
@@ -226,22 +226,22 @@
 							<p>Данный курс - это плод бесценного опыта, практических наработок и уникальных технологий для увеличения продаж в различных отраслях.</p>
 						</div>
 					</div>
-					<div class="about__icon"><img src="upload/svg/str.svg" alt=""></div>
-				</div>
+					<div class="about__icon"><img src="upload/svg/str.svg" alt=""><img src="upload/svg/cup.svg" alt="" class="mobile-show"></div>
+				</div> 
 				<div class="about__item row">
 					<div class="about__content">
 						<div class="about__title title">Признание экспертами</div>
 						<div class="about__text">
 							<p>Лауреат премии на всероссийском конкурсе продуктов дистанционного обучения г. Москва, 2017 год в номинации "Лучшая методология обучения в розничной торговле"</p>
 						</div>
-						<a class="about__btn btn btn_border-red btn_color-red">Забронитьвать место</a>
+						<a data-fancybox data-src="#popup-order" href="javascript:;" class="about__btn btn btn_border-red btn_color-red btn_hover-bg-red btn_hover-color-white">Забронитьвать место</a>
 					</div>
 					<div class="about__icon"><img src="upload/svg/cup.svg" alt=""></div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="reviews">
+	<div class="reviews" id="reviews">
 		<div class="case">
 			<div class="reviews__title title title_mid">Письма благодарности от клиентов</div>
 			<div class="reviews__desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incid. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
@@ -253,7 +253,7 @@
 			</div>
 		</div>
 	</div>
-	<div class="advantages">
+	<div class="advantages" id="advantages">
 		<div class="case">
 			<div class="advantages__title title title_mid">Почему наш курс лучший?</div>
 			<div class="advantages__list row">
@@ -289,24 +289,24 @@
 				</div>
 			</div>
 			<div class="advantages__btns">
-				<a href="" class="advantages__btn btn btn_bg-red btn_border-red btn_color-white">Видеообзор</a>
-				<a href="" class="advantages__btn btn btn_border-black btn_color-black">Все функции в сравнении</a>
+				<a href="https://www.youtube.com/watch?v=kJQP7kiw5Fk" data-fancybox class="advantages__btn btn btn_bg-red btn_border-red btn_color-white btn_hover-bg-black btn_hover-color-white btn_hover-border-black">Видеообзор</a>
+				<a href="" class="advantages__btn btn btn_border-black btn_color-black btn_hover-bg-red btn_hover-color-white btn_hover-border-red">Все функции в сравнении</a>
 			</div>
 		</div>
 	</div>
-	<div class="monitoring">
+	<div class="monitoring" id="monitoring">
 		<div class="case">
 			<div class="monitoring__title">Мы провели мониторинг ХХ курсов и тренингов по входящему звонку в РФ</div>
 			<div class="monitoring__wrap">
 				<div class="monitoring__head row">
-					<div class="monitoring__head-item monitoring__head-item_title">Function description</div>
-					<div class="monitoring__head-item">Curs 1<span>I</span></div>
-					<div class="monitoring__head-item">Curs 2<span>II</span></div>
-					<div class="monitoring__head-item">Curs 3<span>III</span></div>
+					<div class="monitoring__head-item"><u>Function description</u><span>Description</span></div>
+					<div class="monitoring__head-item"><u>Curs 1</u><span>I</span></div>
+					<div class="monitoring__head-item"><u>Curs 2</u><span>II</span></div>
+					<div class="monitoring__head-item"><u>Curs 3</u><span>III</span></div>
 				</div>
 				<div class="monitoring__body">
 					<div class="monitoring__body-line row">
-						<div class="monitoring__body-item monitoring__body-item_title">
+						<div class="monitoring__body-item">
 							<p>Lorem ipsum dolor sit amet</p>
 							<div class="info">
 								<div class="info__icon"><i class="icon icon-info"></i></div>
@@ -316,9 +316,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div></div>
-						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div></div>
-						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div></div>
+						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_mobile round_full"></div></div>
+						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div><div class="round round_mobile round_none"></div></div>
+						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div><div class="round round_mobile round_1-2"></div></div>
 					</div>
 					<div class="monitoring__body-line row">
 						<div class="monitoring__body-item monitoring__body-item_title">
@@ -331,9 +331,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div></div>
-						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div></div>
-						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div></div>
+						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_mobile round_full"></div></div>
+						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_mobile round_none"></div></div>
+						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_mobile round_1-2"></div></div>
 					</div>
 					<div class="monitoring__body-line row">
 						<div class="monitoring__body-item monitoring__body-item_title">
@@ -346,9 +346,9 @@
 								</div>
 							</div>
 						</div>
-						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div></div>
-						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div></div>
-						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div></div>
+						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_mobile round_full"></div></div>
+						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_mobile round_none"></div></div>
+						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_mobile round_1-2"></div></div>
 					</div>
 					<div class="monitoring__body-line row">
 						<div class="monitoring__body-item monitoring__body-item_title">
@@ -361,32 +361,46 @@
 								</div>
 							</div>
 						</div>
-						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div></div>
-						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div></div>
-						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div></div>
+						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div><div class="round round_mobile round_full"></div></div>
+						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div><div class="round round_mobile round_none"></div></div>
+						<div class="monitoring__body-item"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div><div class="round round_mobile round_1-2"></div></div>
 					</div>
 				</div>
-				<div class="monitoring__foot">
-					<a href="" class="monitoring__foot-btn btn btn_border-red btn_color-red">Задать вопрос</a>
+				<div class="monitoring__foot row">
+					<div class="monitoring__foot-counts hidden">
+						<div class="monitoring__foot-count">
+							<span>I</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+						</div>
+						<div class="monitoring__foot-count">
+							<span>II</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+						</div>
+						<div class="monitoring__foot-count">
+							<span>III</span>
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+						</div>
+					</div>
+					<a data-fancybox data-src="#popup-order" href="javascript:;" class="monitoring__foot-btn btn btn_border-red btn_color-red  btn_hover-bg-red btn_hover-color-white">Задать вопрос</a>
 					<div class="monitoring__foot-desc">
 						<div class="monitoring__foot-item">
+							<div class="monitoring__foot-rounds"><div class="round"></div><div class="round"></div><div class="round"></div><div class="round round_mobile round_none"></div></div>
 							<div class="monitoring__foot-wrap">функции нет</div>
-							<div class="monitoring__foot-rounds"><div class="round"></div><div class="round"></div><div class="round"></div></div>
 						</div>
 						<div class="monitoring__foot-item">
+							<div class="monitoring__foot-rounds"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div><div class="round round_mobile round_1-2"></div></div>
 							<div class="monitoring__foot-wrap">средняя реализация или мало предложений</div>
-							<div class="monitoring__foot-rounds"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round"></div></div>
 						</div>
 						<div class="monitoring__foot-item">
+							<div class="monitoring__foot-rounds"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_mobile round_full"></div></div>
 							<div class="monitoring__foot-wrap">есть у всех</div>
-							<div class="monitoring__foot-rounds"><div class="round round_bg"></div><div class="round round_bg"></div><div class="round round_bg"></div></div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="plans">
+	<div class="plans" id="plans">
 		<div class="case">
 			<div class="plans__title title title_mid">Нужен заголовок какой-то</div>
 			<div class="plans__list">
@@ -394,32 +408,32 @@
 					<div class="plans__subtitle">Lorem ipsum</div>
 					<div class="plans__desc">Lorem ipsum dolor sit amet, consectetur.</div>
 					<div class="plans__sum">600 rub</div>
-					<a class="plans__btn btn btn_bg-red btn_color-white">Buy button</a>
+					<a data-fancybox data-src="#popup-order" href="javascript:;" class="plans__btn btn btn_bg-red btn_color-white btn_hover-bg-transparent btn_hover-color-red btn_hover-border-red">Buy button</a>
 					<div class="plans__btn-desc">Lorem ipsum dolor</div>
 				</div>
 				<div class="plans__list-item">
 					<div class="plans__subtitle">Lorem ipsum</div>
 					<div class="plans__desc">Lorem ipsum dolor sit amet, consectetur.</div>
 					<div class="plans__sum">600 rub</div>
-					<a class="plans__btn btn btn_bg-red btn_color-white">Buy button</a>
+					<a data-fancybox data-src="#popup-order" href="javascript:;" class="plans__btn btn btn_bg-red btn_color-white btn_hover-bg-transparent btn_hover-color-red btn_hover-border-red">Buy button</a>
 					<div class="plans__btn-desc">Lorem ipsum dolor</div>
 				</div>
 				<div class="plans__list-item">
 					<div class="plans__subtitle">Lorem ipsum</div>
 					<div class="plans__desc">Lorem ipsum dolor sit amet, consectetur.</div>
 					<div class="plans__sum">600 rub</div>
-					<a class="plans__btn btn btn_bg-red btn_color-white">Buy button</a>
+					<a data-fancybox data-src="#popup-order" href="javascript:;" class="plans__btn btn btn_bg-red btn_color-white btn_hover-bg-transparent btn_hover-color-red btn_hover-border-red">Buy button</a>
 					<div class="plans__btn-desc">Lorem ipsum dolor</div>
 				</div>
 				<div class="plans__list-item">
 					<div class="plans__subtitle">Lorem ipsum</div>
 					<div class="plans__desc">Lorem ipsum dolor sit amet, consectetur.</div>
 					<div class="plans__sum">600 rub</div>
-					<a class="plans__btn btn btn_bg-red btn_color-white">Buy button</a>
+					<a data-fancybox data-src="#popup-order" href="javascript:;" class="plans__btn btn btn_bg-red btn_color-white btn_hover-bg-transparent btn_hover-color-red btn_hover-border-red">Buy button</a>
 					<div class="plans__btn-desc">Lorem ipsum dolor</div>
 				</div>
 			</div>
-			<div class="plans__text">
+			<div class="plans__content">
 				<div class="plans__content-item">
 					<div class="plans__text">
 						<ul>
@@ -462,13 +476,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="payback">
+	<div class="payback" id="payback">
 		<div class="case">
 			<div class="payback__wrap row">
 				<div class="payback__content">
 					<div class="payback__title title">Курс окупается уже в первую неделю обучения</div>
+					<div class="payback__icon mobile-show"><img src="upload/svg/money-hand.svg" alt=""></div>
 					<div class="payback__text">Нами доказано, что среднегодовой прирост выручки после прохождения нашего курса составляет 38%, в отдельных отраслях был зафиксирован рост прибыли в течении первого месяца более чем на 100%!</div>
-					<a href="" class="payback__btn btn btn_bg-red btn_color-white">Хочу увеличить продажи!</a>
+					<a data-fancybox data-src="#popup-order" href="javascript:;" class="payback__btn btn btn_bg-red btn_color-white btn_hover-bg-transparent btn_hover-color-red btn_hover-border-red">Хочу увеличить продажи!</a>
 				</div>
 				<div class="payback__icon"><img src="upload/svg/money-hand.svg" alt=""></div>
 			</div>
@@ -476,17 +491,17 @@
 	</div>
 </main>
 
-<footer class="footer">
+<footer class="footer bg" id="sub">
 	<div class="case">
 		<div class="footer__sub sub">
 			<div class="sub__title">Хотите получать последние новости?</div>
 			<div class="sub__desc">Оформите подписку и будьте в курсе всех новостей по продажам</div>
-			<div class="sub__elemets">
+			<div class="sub__elemets row between">
 				<input type="text" class="sub__input input input_round" placeholder="info@company.com">
-				<input type="submit" class="sub__btn btn btn_border-red btn_color-red" value="Подписаться">
+				<input type="submit" class="sub__btn btn btn_border-red btn_color-red btn_hover-bg-red btn_hover-color-white" value="Подписаться">
 			</div>
 		</div>
-		<div class="footer__content row">
+		<div class="footer__content row i-mid">
 			<div class="footer__copy">Copyright © 2005 - 2018</div>
 			<div class="footer__phone"><a href="tel:+74952284635">+7 (495) 228-46-35</a></div>
 			<div class="panel__links links">
@@ -501,21 +516,27 @@
 </footer>
 
 <div class="popup popup_order" id="popup-order">
-	<div class="popup__close"><i class="icon icon-cancel"></i></div>
+	<div class="popup__close" data-fancybox-close=""><i class="icon icon-cancel"></i></div>
 	<div class="popup__wrap">
 		<input type="text" class="popup__input input input_default" placeholder="Имя">
 		<input type="text" class="popup__input input input_default" placeholder="Email">
-		<input type="text" class="popup__input input input_default" placeholder="Телефон">
-		<input type="submit" class="popup__btn btn btn_bg-red btn_border-red btn_color-white" value="Отправить">
+		<input type="text" class="popup__input input input_default input_phone" placeholder="Телефон*">
+		<input type="submit" class="popup__btn btn btn_bg-red btn_border-red btn_color-white btn_hover-bg-transparent btn_hover-color-red" value="Отправить">
 	</div>
 </div>
 
 
 
-<div class="popup popup_thanks" id="popup-thanks">
-	<div class="popup__close"><i class="icon icon-cancel"></i></div>
+<div class="popup popup_thanks-order" id="popup-thanks">
+	<div class="popup__close" data-fancybox-close=""><i class="icon icon-cancel"></i></div>
 	<div class="popup__title">Спасибо!</div>
-	<div class="popup__title">Ваша заявка успешно отправлена.</div>
+	<div class="popup__desc">Ваша заявка успешно отправлена.</div>
+</div>
+
+<div class="popup popup_thanks-sub" id="popup-thanks">
+	<div class="popup__close" data-fancybox-close=""><i class="icon icon-cancel"></i></div>
+	<div class="popup__title">Успешно!</div>
+	<div class="popup__desc">Вы подписаны на новости.</div>
 </div>
 </body>
 </html>
